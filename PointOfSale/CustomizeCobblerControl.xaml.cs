@@ -10,6 +10,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using ExamTwoCodeQuestions.Data;
 
 namespace ExamTwoQuestions.PointOfSale
 {
@@ -21,6 +22,30 @@ namespace ExamTwoQuestions.PointOfSale
         public CustomizeCobblerControl()
         {
             InitializeComponent();
+        }
+
+        private void IcereamButton_Click(object sender, RoutedEventArgs e)
+        {
+            Cobbler cobbler = new Cobbler();
+            cobbler.WithIceCream = true;
+        }
+
+        private void PeachFilling_Click(object sender, RoutedEventArgs e)
+        {
+            Cobbler cobbler = new Cobbler();
+            cobbler.Fruit = FruitFilling.Peach;
+        }
+
+        private void CherryFilling_Click(object sender, RoutedEventArgs e)
+        {
+            Cobbler cobbler = new Cobbler();
+            cobbler.Fruit = FruitFilling.Cherry;
+        }
+
+        private void BlueberryFilling_Click(object sender, RoutedEventArgs e)
+        {
+            Cobbler cobbler = new Cobbler();
+            cobbler.Fruit = FruitFilling.Blueberry;
         }
     }
 }
